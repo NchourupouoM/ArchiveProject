@@ -20,7 +20,7 @@ class Archive(models.Model):
     date_modification = models.DateTimeField(auto_now=True)
     description = models.TextField(blank=True)
     fichier = models.FileField(upload_to='media/')  # Spécifier le chemin où stocker les fichiers
-    metadonnees = models.JSONField(default=dict, blank=True)
+    metadonnees = models.JSONField(default=dict, blank=True)    
     cellule = models.ForeignKey(Cellule, on_delete=models.CASCADE)
 
     def __str__(self):
