@@ -10,7 +10,16 @@
         {% block content %}{% endblock content %}
         {% if user.is_authenticated %}
             <div>
-                <a href="{% url 'logout' %}">Se déconnecter</a>
+                <a href="">Dashboard</a>
+            </div>
+            <div>
+                <a href=""> Mon Compte </a>
+            </div>
+            <div>
+                <a href=""> Dossier </a>
+            </div>
+            <div>
+                <a href="{% url 'logout' %}"> Se déconnecter </a>
             </div>
         {% endif %}
     </section>
