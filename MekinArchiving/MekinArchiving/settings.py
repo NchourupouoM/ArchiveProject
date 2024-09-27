@@ -125,3 +125,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'authentication.User'
+
+# permet de rediriger l'utilisateur vers la page de connection s'il essaie de se connecter a la page home par le biais de l'url sans renseigner ses identifiants.
+LOGIN_URL = "login"
+
+#permet de rediriger les utilisateur connectes sur la page home en utilisant les vues generiques url (dans le urls.py). 
+LOGIN_REDIRECT_URL = "home"
+
+LOGOUT_REDIRECT_URL = LOGIN_URL

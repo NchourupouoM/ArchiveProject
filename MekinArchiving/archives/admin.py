@@ -5,7 +5,7 @@ from django.contrib import admin
 from archives.models import DossierJour, Cellule, Archive
 
 class DossierJourAdmin(admin.ModelAdmin):
-    list_display = ('date')
+    list_display = ('date',)
 
 class CelluleAdmin(admin.ModelAdmin):
     list_display = ('nom','dossier_jour')
