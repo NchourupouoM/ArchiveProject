@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>
+    {% for archive in archives %}
+    <div>
+        <a href="#">
+            <p>{{archive.titre}}</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

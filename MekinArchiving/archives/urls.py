@@ -8,4 +8,7 @@ import archives.views
 
 urlpatterns = [
     path('home/',archives.views.home,name='home'),
+    path('dossier/',archives.views.Dossier, name='dossier'),
+    path('cellules/<int:dossier_id>', archives.views.cellule, name='cellule'),
+    path('documents/<int:cellule_id>', archives.views.archives_view, name="archive"),
 ]

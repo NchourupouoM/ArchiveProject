@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres',
     'archives',
     'search',
     'authentication',
@@ -70,7 +71,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'MekinDB',
         'USER': "postgres",
-        "PASSWORD": "20mohamed04",
+        "PASSWORD": "20awal",
         "HOST": "127.0.0.1",
         "PORT": "5432",
     }

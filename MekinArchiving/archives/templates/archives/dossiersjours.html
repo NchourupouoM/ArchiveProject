@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>
+    {% for dossier in dossiers %}
+    <div>
+        <a href="{% url 'cellule' dossier.id %}">
+            <p>DOC_{{dossier.date}}</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

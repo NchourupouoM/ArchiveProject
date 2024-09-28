@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>
+    {% for cellule in cellules %}
+    <div>
+        <a href="{% url 'archive' cellule.id %}">
+            <p>{{cellule.nom}}</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
