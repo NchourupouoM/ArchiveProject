@@ -1,4 +1,7 @@
 from django import forms
 
 class SearchForm(forms.Form):
-    rechercher = forms.TextInput(max_length=1000,label="Rechercher")
+    query = forms.CharField(max_length=200)
+
+    class Meta:
+        fields = ['query']

@@ -1,16 +1,19 @@
+from search.forms import SearchForm
+from archives.models import Archive
+from django.contrib.postgres.search import SearchVector
 from django.shortcuts import render
 
-# Create your views here.
-from haystack.forms import SearchForm
-from haystack.query import SearchQuerySet
+def searchDocument(request):
+    query = None
+    results = []
+    search_form = SearchForm()
 
-def recherche(request):
-    if request.method == 'POST':
-        form = SearchForm(request.POST)
-        if form.is_valid():
-            query = form.cleaned_data['query']
-            resultats = SearchQuerySet().filter(text__contains=query)
-            return render(request, 'resultats_recherche.html', {'resultats': resultats})
-    else:
-        form = SearchForm()
-    return render(request, 'formulaire_recherche.html', {'form': form})
+    if 'query' in request.GET:
+        search_form = SearchForm(request.GET)
+        if search_form.is_valid():
+            query = search_form.cleaned_data['query']
+            results = Archive.published.annotate(
+                search = SearchVector('titre','metadonnees'),
+            ).filter(search=query)
+
+    return render(request=request, template_name="search/search_result.html",context={"search_form":search_form,'query':query, 'results':results})

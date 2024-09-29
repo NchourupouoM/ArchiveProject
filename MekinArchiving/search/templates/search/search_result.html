@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div>
+    {% if query %}
+            <h1>Documents contenant {{ query }}</h1>
+            <h3>
+                {% with results.count as total_result %}
+                    Found {{ total_result }} result{{total_result|pluralize }}
+                {% endwith %}
+            </h3>
+
+        {% for result in  results %}
+            <div>
+                <a href="">
+                    <p>{{result.titre}}</p>
+                </a>
+            </div>
+            {% empty %}
+                <p>Il n'y a pas de resultat pour cette requete.</p>
+        {% endfor %}
+        <p><a href="{% url 'home' %}">Rechercher</a></p>
+    {% else %}
+        <h1>Rechercher un document </h1>
+        <form method="get">
+            {{SearchForm.as_p}}
+            <input type="submit" value="search">
+        </form>
+    {% endif %}
+    <p>query: {{query}}</p>
+</div>
+{% endblock content%}

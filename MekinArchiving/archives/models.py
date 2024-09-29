@@ -13,6 +13,11 @@ class Cellule(models.Model):
 
     def __str__(self):
         return self.nom
+    
+
+class ArchiveManager(models.Manager):
+    def published(self):
+        return self.filter(status='published')
 
 class Archive(models.Model):
     titre = models.CharField(max_length=255)
@@ -22,6 +27,7 @@ class Archive(models.Model):
     fichier = models.FileField(upload_to='media/')  # Spécifier le chemin où stocker les fichiers
     metadonnees = models.JSONField(default=dict, blank=True)    
     cellule = models.ForeignKey(Cellule, on_delete=models.CASCADE)
+    published = ArchiveManager()
 
     def __str__(self):
         return self.titre
