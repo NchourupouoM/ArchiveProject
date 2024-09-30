@@ -5,9 +5,10 @@
     {% for archive in archives %}
     <div>
         <a href="#">
-            <p>{{archive.titre}}</p>
+            <p><span>{{archive.titre}}</span> | <span>{{archive.uploader}}</span></p>
         </a>
     </div>
     {% endfor %}
+    
 </div>
 {% endblock content %}

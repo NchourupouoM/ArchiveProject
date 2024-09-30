@@ -8,6 +8,7 @@
             <p>{{cellule.nom}}</p>
         </a>
     </div>
+    <a href="{% url 'upload' cellule.id %}">Archiver un document</a>
     {% endfor %}
 </div>
 {% endblock content %}
