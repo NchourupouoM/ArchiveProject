@@ -2,6 +2,7 @@
 {% block content %}
 
 <div>
+    <a href="{% url 'cellule' archives.first.cellule.dossier_jour.id %}">Back</a>
     {% for archive in archives %}
     <div>
         <a href="#">

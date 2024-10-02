@@ -34,4 +34,4 @@ def upload_archive(request, cellule_id):
             archive.cellule = cellule
             archive.save()
             return redirect('dossier')
-    return render(request=request,template_name='archives/upload_archive.html',context={'form':form})
+    return render(request=request,template_name='archives/upload_archive.html',context={'form':form,'cellule':cellule})

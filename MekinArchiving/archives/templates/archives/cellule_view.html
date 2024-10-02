@@ -2,6 +2,7 @@
 {% block content %}
 
 <div>
+    <a href="{% url 'dossier' %}">Back</a>
     {% for cellule in cellules %}
     <div>
         <a href="{% url 'archive' cellule.id %}">

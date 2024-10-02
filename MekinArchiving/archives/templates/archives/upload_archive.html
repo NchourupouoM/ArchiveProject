@@ -2,10 +2,12 @@
 {% block content %}
 
 <h2> Uploder une archive </h2>
+
 <form method="post" enctype="multipart/form-data">
     {{form.as_p}}
     {% csrf_token %}
     <button type="submit">Valider</button>
+    <a href="{% url 'cellule' cellule.id %}">Abandonner ?</a>
+    <a href="">Valider et continuer ?</a>
 </form>
-
 {% endblock content%}
