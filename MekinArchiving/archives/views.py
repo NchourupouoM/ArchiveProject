@@ -25,7 +25,6 @@ def list_archives_view(request,cellule_id):
 def upload_archive(request, cellule_id):
     cellule = get_object_or_404(models.Cellule, id=cellule_id)
     form = forms.ArchiveForm()
-
     if request.method == 'POST':
         form = forms.ArchiveForm(request.POST,request.FILES)
         if form.is_valid():
