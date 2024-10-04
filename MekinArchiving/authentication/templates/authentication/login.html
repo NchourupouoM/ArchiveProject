@@ -1,12 +1,12 @@
-{% extends 'base.html'%}
-{% block content %}
+{% extends 'base.html'%} {% block content %}
 
-<form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
+<div class="row align-items-center">
+  <form method="post">
+    {% csrf_token %} {{form.as_p}}
     <p>{{message}}</p>
     <p>Mot de passe oublier ? <a href="">contactez l'admin</a></p>
     <button type="submit">Se connecter</button>
-</form>
+  </form>
+</div>
 
 {% endblock content%}

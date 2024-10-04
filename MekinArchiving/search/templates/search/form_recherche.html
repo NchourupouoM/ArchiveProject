@@ -1,14 +1,6 @@
-{% extends 'base.html' %}
-{% block content %}
-
-<h1>Rechercher un document </h1>
-<form action="{% url 'search' %}" method="get">
-    <input type="text" placeholder="Entrer une Rechercher">
-    <button type="submit">Rechercher</button>
+{% extends 'base.html' %} {% block content %}
+<form class="" action="{% url 'search' %}" method="get">
+  <input type="text" placeholder="Rechercher" />
+  <button type="submit">Rechercher</button>
 </form>
-
 {% endblock content %}
-
-
-
-
