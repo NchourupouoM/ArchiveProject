@@ -1,12 +1,25 @@
-{% extends 'base.html'%} {% block content %}
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'authentication/login.css'%}">
+</head>
+<body>
 
-<div class="row align-items-center">
-  <form method="post">
-    {% csrf_token %} {{form.as_p}}
-    <p>{{message}}</p>
-    <p>Mot de passe oublier ? <a href="">contactez l'admin</a></p>
-    <button type="submit">Se connecter</button>
-  </form>
-</div>
+  <div class="login-contener">
+    <div class="app-title">
+      <h2>MEKIN ARCHIVE</h2>
+    </div>
+    <form method="post" class="form-login">
+      {% csrf_token %} {{form.as_p}}
+      <p class="alert-message">{{message}}</p>
+      <p class="forgot-password">Mot de passe oublier ? <a class="Contact-admin" href="">contactez l'admin</a></p>
+      <button type="submit" class="bouton-submit">Connexion</button>
+    </form>
+  </div>
 
-{% endblock content%}
+</body>
+</html>

@@ -1,10 +1,10 @@
 {% extends 'base.html'%}
 {% block content %}
-
-<h1>Rechercher un document </h1>
-<form action="{% url 'search' %}" method="get">
-    <input name="query" type="text" placeholder="Entrer une Rechercher">
-    <button type="submit">Rechercher</button>
-</form>
-
+<div class="search-doc">
+    <h2>Rechercher un document </h2>
+    <form action="{% url 'search' %}" method="get">
+        <input name="query" type="text" placeholder="Rechercher">
+        <button type="submit">Rechercher</button>
+    </form>
+</div>
 {% endblock content%}

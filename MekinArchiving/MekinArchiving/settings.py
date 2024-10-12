@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'archives',
     'search',
     'authentication',
+    'fontawesomefree',
 ]
 
 MIDDLEWARE = [

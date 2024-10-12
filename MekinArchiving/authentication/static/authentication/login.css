@@ -1,0 +1,69 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(223, 223, 239);
+    margin-top: 50px;
+}
+
+.login-contener{
+    background-image: url('./images/image1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.login-contener .app-title{
+    background-color: rgb(61, 61, 225);
+    border-radius: 7px;
+    text-align: center;
+}
+
+.login-contener .app-title h2{
+    font-weight: normal;
+    color: rgb(242, 237, 237);
+}
+
+.login-contener .form-login #id_password{
+    margin-left: 25px;
+}
+
+.login-contener .form-login input {
+    border-radius: 7px;
+    border-width: 2px;
+    border-color:rgb(61, 61, 225);
+    padding-left: 5px;
+    width: 170px;
+}
+
+.login-contener .form-login .forgot-password a{
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(245, 163, 10);
+}
+
+.login-contener .form-login .forgot-password a:hover{
+    color: blue;
+}
+
+.login-contener .form-login .bouton-submit{
+    background-color: rgb(61, 61, 225);
+    color: white;
+    border: none;
+    margin-left: 100px;
+    width: 100px;
+    height: 23px;
+    border-radius: 7px;
+}
+
+.login-contener .form-login .bouton-submit:hover{
+    color: rgb(245, 243, 243);
+    background-color: rgb(100, 100, 165);
+}
+
+.login-contener .form-login .alert-message{
+    color: red;
+    margin-left:100px ;
+    font-weight: bold;
+}

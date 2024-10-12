@@ -1,0 +1,68 @@
+body{
+    height:483px;
+    margin: 0;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: rgb(247, 247, 252);
+}
+
+main .sidebar{
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: rgb(61, 61, 225) 1px;
+    color: white;
+}
+main .sidebar .appUsername{
+    background-color: rgb(61, 61, 225);
+    padding: 5px;
+    border-radius: 0 0 7px 0;
+}
+
+main .sidebar .navbar div{
+    margin-left: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+main .sidebar .navbar div img{
+    width: 20px;
+    height:20px;
+}
+
+main .sidebar .navbar div span{
+    display: block;
+    text-decoration: none;
+    background-color:rgb(61, 61, 225);
+    color: white;
+    padding: 1px;
+    width: 105px;
+    border-radius: 0 7px 7px 0;
+}
+
+main .sidebar .navbar div span a{
+    text-decoration: none;
+    color: white;
+    padding-left: 3px;
+}
+
+main .sidebar .navbar .bt-deconnexion{
+    margin-top: 183px;
+}
+
+main .content{
+    width: 100%;
+    height: 100%;
+}
+
+main .sidebar .navbar div span:hover{
+    background-color: rgb(12, 12, 88);
+}

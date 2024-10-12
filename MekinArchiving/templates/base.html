@@ -1,29 +1,55 @@
+{%load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body class="">
-    <main class="">
-      <nav class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archive App</title>
+  <link rel="stylesheet" href="{% static '../static/base.css' %}" />
+  <link rel="stylesheet" href="{% static '../static/home.css'%}" />
+  <link rel="stylesheet" href="{% static '../static/search-result.css'%}">
+</head>
+<body>
+  <main>
+    <div class="sidebar">
+      <div class="appUsername">
+        <h5>MEKIN ARCHIVE</h5>
+        <img src="" alt="">
+        <p>Hi, {{user.username}} </p>
+      </div>
+      <nav class="navbar">
         {% if user.is_authenticated %}
-        <div>
-          <a href="#">Dashboard</a>
+        <div class="bt-navbar">
+          <img src="{% static './images/tableau-de-bord.png'%}" alt="">
+          <span>
+              <a href="#">Dashboard</a>
+          </span>
         </div>
-        <div>
-          <a href="#"> Mon Compte </a>
+        <div class="bt-navbar">
+          <img src="{% static './images/utilisateur.png' %}" alt="">
+          <span>
+              <a href="#"> Mon Compte </a>
+          </span>
         </div>
-        <div>
-          <a href="{% url 'dossier' %}"> Dossier </a>
+        <div class="bt-navbar ">
+          <img src="{% static './images/dossier.png'%}" alt="">
+          <span>
+            <a href="{% url 'dossier' %}"> Dossier </a>
+          </span>
         </div>
+        <div class="bt-navbar bt-deconnexion">
+          <img src="{% static './images/deconnexion.png'%}" alt="">
+          <span>
+            <a href="{% url 'logout' %}"> Se déconnecter </a>
+          </span>
         <div>
-          <a href="{% url 'logout' %}"> Se déconnecter </a>
+        </div>
         </div>
         {% endif %}
       </nav>
-      <div class="">{% block content %}{% endblock content %}</div>
-    </main>
-  </body>
+    </div>
+    <div class="content">{% block content %}{% endblock content %}</div>
+  </main>
+</body>
+
 </html>
