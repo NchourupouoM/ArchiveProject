@@ -8,7 +8,7 @@ from django.contrib.auth.views import LoginView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/', include("authentication.urls")),
+    path('', include("authentication.urls")),
     path('archives/', include("archives.urls")),
     path('search/', include("search.urls")),
 ]

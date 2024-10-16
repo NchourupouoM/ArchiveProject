@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from . import models
 from django.shortcuts import get_object_or_404
 from . import forms
-
+from django.http import FileResponse
 # Create your views here.
 def home(request):
     message = "Bienvenu"

@@ -1,0 +1,47 @@
+.content .dossiers-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.content .dossiers-container .dossier-back-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    height: 15px;
+    margin-bottom: 50px;
+}
+
+.content .dossiers-container .dossier-back-container .backbuton{
+    margin: 10px;
+    background-color: rgb(61, 61, 225);
+    width: 60px;
+    padding: 5px;
+    height: 15px;
+    border-radius: 7px;
+}
+
+.content .dossiers-container .dossier-back-container .backbuton a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding-left: 5px;
+}
+
+.content .dossiers-container .dossier-back-container  img{
+    margin-top: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.content .dossiers-container .dossier .dossier-elt{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.content .dossiers-container .image-dossier img{
+    width: 25px;
+    height: 25px;
+}

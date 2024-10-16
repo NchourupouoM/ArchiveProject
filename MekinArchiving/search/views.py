@@ -13,7 +13,7 @@ def searchDocument(request):
         if search_form.is_valid():
             query = search_form.cleaned_data['query']
 
-            vector_search = SearchVector('titre','metadonnees')
+            vector_search = SearchVector('titre','description')
             query_search = SearchQuery(query)
 
             results = Archive.published.annotate(

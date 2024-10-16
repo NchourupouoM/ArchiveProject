@@ -1,13 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<div>
-    <a href="{% url 'home' %}">Back</a>
+{%load static %}
+<div class="dossiers-container">
+    <div class="dossier-back-container">
+            <img src="{% static 'images/bouton-retour.png'%}" alt="">
+        <span class="backbuton">
+            <a href="{% url 'home' %}">Back</a>
+        </span>
+    </div>
     {% for dossier in dossiers %}
-    <div>
-        <a href="{% url 'cellule' dossier.id %}">
-            <p>DOC_{{dossier.date}}</p>
-        </a>
+    <div class="dossier">
+        <div class="dossier-elt">
+            <div class="image-dossier">
+                <img src="{% static 'images/dossier.png'%}" alt="">
+            </div>
+            <div>
+                <a href="{% url 'cellule' dossier.id %}">
+                    DOC_{{dossier.date}}
+                </a>
+            </div>
+        </div>
+        <hr>
     </div>
     {% endfor %}
 </div>

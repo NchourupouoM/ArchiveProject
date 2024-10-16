@@ -5,4 +5,4 @@ from . import models
 class ArchiveForm(forms.ModelForm):
     class Meta:
         model = models.Archive
-        fields = ['titre','description','fichier','metadonnees']
+        fields = ['titre','description','fichier']

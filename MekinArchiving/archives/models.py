@@ -25,9 +25,8 @@ class Archive(models.Model):
     date_creation = models.DateTimeField(auto_now_add=True)
     date_modification = models.DateTimeField(auto_now=True)
     description = models.TextField(blank=True)
-    fichier = models.FileField(upload_to='media/')  # Spécifier le chemin où stocker les fichiers
+    fichier = models.FileField(upload_to='')  # Spécifier le chemin où stocker les fichiers
     uploader = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING)    
-    metadonnees = models.JSONField(default=dict, blank=True)
     cellule = models.ForeignKey(Cellule, on_delete=models.CASCADE)
     published = ArchiveManager()
 

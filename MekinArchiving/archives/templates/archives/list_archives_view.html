@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% load static %}
 <div>
-    <a href="{% url 'cellule' archives.first.cellule.dossier_jour.id %}">Back</a>
+    <a href="{% url 'dossier' %}">Back</a>
     {% for archive in archives %}
     <div>
-        <a href="#">
+        <a href="{{ archive.fichier.url }}" target="_blank">
             <p><span>{{archive.titre}}</span> | <span>{{archive.uploader}}</span></p>
         </a>
-    </div>
+    </div>      
     {% endfor %}
-    
 </div>
 {% endblock content %}
