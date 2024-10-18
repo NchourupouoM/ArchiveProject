@@ -1,5 +1,5 @@
 from django.views.generic import View
-from authentication import forms
+from authentication import forms, models
 from django.shortcuts import render,redirect
 from django.contrib.auth import logout, authenticate, login
 
@@ -28,3 +28,16 @@ class LoginPageView(View):
 def logout_user(request):
     logout(request)
     return redirect('login')
+
+def mon_compte(request):
+    user = request.user
+    return render(request,'authentication/mon_compte.html',{"user":user})
+
+def photo_upload(request):
+    form = forms.PhotoProfil(instance=request.user)
+    if request.method == 'POST':
+        form = forms.PhotoProfil(request.POST,request.FILES,instance=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('mon-compte')
+    return render(request,'authentication/updated_profil_photo.html',{'form':form})

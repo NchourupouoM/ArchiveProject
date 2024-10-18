@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="content-compte">
+    <div class="button-back-image">
+        <div>
+            <img class="back" src="{% static 'images/bouton-retour.png' %}" alt="">
+        </div>
+        <div class="button-back">
+            <a href="{% url 'home' %}">Back</a>
+        </div>
+    </div>
+    <div class="profil-elt">
+        <div class="mekintitle">
+            <h3>MEKIN ARCHIVE</h3>
+        </div> 
+        <div class="photo-username">
+            <img class="profil" src="{{ user.profile_photo.url }}" alt="photo de profil">
+            <span>Bienvenu, {{user.username}}</span>
+        </div>
+        <div class="updated-all">
+            <div class="updated-photo updated">
+                <img class="photo-icon" src="{% static 'images/reset_profile.png'%}" alt="">
+                <a href="{% url 'change-profil' %}">Modifier votre photo de profil</a>
+            </div>
+            <div class="updated-password updated">
+                <img class="photo-icon" src="{% static 'images/reset-password.png'%}" alt="">
+                <a href="{% url 'password_change'%}">Modifier votre mot de passe</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

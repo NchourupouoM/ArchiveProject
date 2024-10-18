@@ -1,15 +1,34 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<div>
-    <a href="{% url 'dossier' %}">Back</a>
-    {% for cellule in cellules %}
-    <div>
-        <a href="{% url 'archive' cellule.id %}">
-            <p>{{cellule.nom}}</p>
-        </a>
+{% load static %}
+<div class="dossiers-container">
+    <div class="dossier-back-container">
+        <img src="{% static 'images/bouton-retour.png'%}" alt="">
+        <span class="backbuton">
+            <a href="{% url 'dossier' %}">Back</a>
+        </span>
     </div>
-    <a href="{% url 'upload' cellule.id %}">Archiver un document</a>
+    <div class="dossier-title">
+        <img src="{% static 'images/dossier.png'%}" alt="">
+        DOC_{{cellules.first.dossier_jour.date}}
+    </div>
+    {% for cellule in cellules %}
+    <div class="dossier cellule">
+        <div class="dossier-elt">
+            <div class="image-dossier">
+                <img src="{% static 'images/dossier.png'%}" alt="">
+            </div>
+            <div class="cellule_name">
+                <a href="{% url 'archive' cellule.id %}">
+                    {{cellule.nom}}
+                </a>
+                <a href="{% url 'upload' cellule.id %}">
+                    <img src="{% static 'images/cloud-computing.png' %}" alt="">
+                    upload</a>
+            </div>
+        </div>
+        <hr>
+    </div>
     {% endfor %}
 </div>
 {% endblock content %}

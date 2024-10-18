@@ -1,3 +1,15 @@
+main .sidebar .appUsername img {
+    width: 45px;
+    height: 45px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+main .sidebar .appUsername h5{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
 main .content .search-doc{
     display: flex;
     flex-direction: column;

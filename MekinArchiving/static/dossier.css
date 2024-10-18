@@ -1,3 +1,28 @@
+.content .dossiers-container .cellule{
+    margin-left: 40px;
+    margin-top: 5px;
+}   
+
+.content .dossiers-container .cellule-uploader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+.content .dossiers-container .dossier-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.content .dossiers-container .dossier-title img {
+    width: 25px;
+    height: 25px;
+}
+
+
 .content .dossiers-container{
     display: flex;
     justify-content: flex-start;
@@ -9,7 +34,7 @@
     justify-content: flex-start;
     flex-direction: row;
     height: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .content .dossiers-container .dossier-back-container .backbuton{
@@ -45,3 +70,30 @@
     width: 25px;
     height: 25px;
 }
+
+.content .dossiers-container .dossier .dossier-elt div  a{
+    text-decoration: none;
+}
+
+.content .dossiers-container .dossier .dossier-elt div a:hover {
+    color: rgb(12, 12, 88);
+}
+
+.content .dossiers-container .dossier .dossier-elt a{
+    display: block;
+}
+
+.content .dossiers-container .dossier .dossier-elt .cellule_name{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    gap: 100px;
+    flex: 1;
+    padding-right: 50px;
+}
+
+.content .dossiers-container .dossier .dossier-elt .cellule_name img {
+    width: 20px;
+    height: 20px;
+}
+

@@ -9,17 +9,23 @@
   <link rel="stylesheet" href="{% static '../static/home.css'%}" />
   <link rel="stylesheet" href="{% static '../static/search-result.css'%}">
   <link rel="stylesheet" href="{% static '../static/dossier.css'%}">
+  <link rel="stylesheet" href="{% static '../static/cellule_view.css'%}">
+  <link rel="stylesheet" href="{% static '../static/mon_compte.css'%}">
 </head>
 <body>
   <main>
     <div class="sidebar">
       <div class="appUsername">
         <h5>MEKIN ARCHIVE</h5>
-        <img src="" alt="">
-        <p>Hi, {{user.username}} </p>
+        {% if user.profile_photo %}
+          <img src="{{user.profile_photo.url}}" alt="">
+        {% else %}
+          <img src="{% static 'images/profil.png'%}" alt="">
+        {% endif %}
+        {% if user.is_authenticated %}
+        <p>Salut, {{user.username}} </p>
       </div>
       <nav class="navbar">
-        {% if user.is_authenticated %}
         <div class="bt-navbar">
           <img src="{% static './images/tableau-de-bord.png'%}" alt="">
           <span>
@@ -29,7 +35,7 @@
         <div class="bt-navbar">
           <img src="{% static './images/utilisateur.png' %}" alt="">
           <span>
-              <a href="#"> Mon Compte </a>
+              <a href="{% url 'mon-compte' %}"> Mon Compte </a>
           </span>
         </div>
         <div class="bt-navbar ">

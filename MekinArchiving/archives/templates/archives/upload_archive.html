@@ -1,12 +1,14 @@
 {% extends 'base.html'%}
 {% block content %}
 
-<h2> Uploader une archive </h2>
+<h2>Uploader une archive</h2>
 {{message}}
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{form.as_p}}
-    <button type="submit">Valider</button>
-    <a href="{% url 'cellule' cellule.id %}">Abandonner ?</a>
+    <div class="upload-buttons">
+        <button type="submit">Valider</button>
+        <a href="{% url 'cellule' cellule %}">Annuler ?</a>
+    </div>
 </form>
 {% endblock content%}

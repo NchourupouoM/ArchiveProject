@@ -1,0 +1,100 @@
+.content-compte{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.content-compte .profil-elt .mekintitle{
+    background-color: rgb(61, 61, 225);
+    width: 300px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 7px;
+}
+
+.content-compte .button-back{
+    background-color: rgb(61, 61, 225);
+    margin-top: 10px;
+    width: 50px;
+    text-align: center; 
+    padding: 3px;
+    border-radius: 7px;
+}
+
+.content-compte .button-back-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.content-compte .back{
+    margin-top: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.content-compte .button-back:hover{
+    background-color: rgb(12, 12, 88);
+}
+
+.content-compte .button-back a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.content-compte .profil-elt h3{
+    color: white;
+}
+
+.content-compte .profil-elt{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.content-compte .profil-elt .profil{
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin-bottom: 7px;
+}
+
+.content-compte .profil-elt .photo-username{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.content-compte .profil-elt a{
+    text-decoration: none;
+}
+
+.content-compte .profil-elt .updated-photo{
+    margin-top: 15px;
+}
+
+.content-compte .profil-elt .photo-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.content-compte .profil-elt .updated{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 7px;
+}
+
+.content-compte .profil-elt .updated-all{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

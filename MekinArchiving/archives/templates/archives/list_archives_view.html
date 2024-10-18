@@ -1,13 +1,33 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-<div>
-    <a href="{% url 'dossier' %}">Back</a>
+<div class="dossiers-container">
+    <div class="dossier-back-container">
+        <img src="{% static 'images/bouton-retour.png'%}" alt="">
+        <span class="backbuton">
+            <a href="{% url 'dossier' %}">Back</a>
+        </span>
+    </div>
+    <div class="cellule-uploader">
+        <div class="dossier-title">
+            <img src="{% static 'images/dossier.png'%}" alt="">
+            {{archives.first.cellule.nom}}
+        </div>
+        <div>uploader</div>
+    </div>
     {% for archive in archives %}
-    <div>
-        <a href="{{ archive.fichier.url }}" target="_blank">
-            <p><span>{{archive.titre}}</span> | <span>{{archive.uploader}}</span></p>
-        </a>
+    <div class="dossier cellule">
+        <div class="dossier-elt">
+            <div class="image-dossier">
+                <img src="{% static 'images/fichier.png'%}" alt="">
+            </div>
+            <div class="cellule_name">
+                <a href="{{ archive.fichier.url }}" target="_blank">
+                    {{archive.titre}}
+                </a>
+                <span>{{archive.uploader}}</span>
+            </div>
+        </div>
     </div>      
     {% endfor %}
 </div>
