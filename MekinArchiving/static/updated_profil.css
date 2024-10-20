@@ -1,0 +1,71 @@
+.updated_profil{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.updated_profil .form-contenner form button{
+    color: white;
+    background-color: rgb(61, 61, 225);
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 7px;
+}
+
+.updated_profil .form-contenner form button:hover{
+    background-color:rgb(12, 12, 88);
+}
+.updated_profil .form-contenner form p {
+    margin-top: 0;
+    line-height: 2;
+}
+
+.updated_profil .form-contenner form a {
+    text-decoration: none;
+}
+
+.updated_profil .form-contenner form input{
+    background-color: rgb(61, 61, 225);;
+    color: white;
+    border-radius: 7px;
+}
+
+.updated_profil .form-contenner form {
+    background-color: rgb(227, 224, 224);
+    padding: 30px;
+    border-radius: 7px;
+}
+
+.button-back{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.button-back a{
+    text-decoration: none;
+    color: white;
+}
+
+.button-back .back{
+    background-color: rgb(61, 61, 225);
+    padding-left: 7px;
+    padding-right: 7px;
+    height: 25px;
+    border-radius: 7px;
+}
+
+.button-back .back:hover {
+    background-color: rgb(12, 12, 88);
+}
+
+.button-back img{
+    width: 25px;
+    height: 25px;
+    padding-bottom: 5px;
+}

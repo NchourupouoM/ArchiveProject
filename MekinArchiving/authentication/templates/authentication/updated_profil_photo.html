@@ -1,11 +1,22 @@
 {% extends 'base.html'%}
 {% block content %}
-
-<h2>Telechargez une image </h2>
-<form method="post" enctype="multipart/form-data">
-    {{form.as_p}}
-    {% csrf_token %}
-    <button type="submit">Valider</button>
-</form>
-
+{% load static %}
+<div class="button-back">
+    <div>
+        <img src="{% static 'images/bouton-retour.png' %}" alt="">
+    </div>
+    <div class="back">
+        <a href="{% url 'mon-compte' %}">Back</a>
+    </div>
+</div>
+<div class="updated_profil">
+    <h2 class="title_updated">Uploader une image de profile </h2>
+    <div class="form-contenner">
+        <form method="post" enctype="multipart/form-data">
+            {{form.as_p}}
+            {% csrf_token %}
+            <button type="submit">Valider</button>
+        </form>
+    </div>
+</div>
 {% endblock content%}
