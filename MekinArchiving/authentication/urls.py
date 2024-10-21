@@ -14,4 +14,5 @@ urlpatterns = [
         template_name = "authentication/change_password_done.html",
     ),name="password_change_done"),
     path('change-profil/',authentication.views.photo_upload,name='change-profil'),
+    path('addUser/',authentication.views.signup_page,name='signup'),
 ]

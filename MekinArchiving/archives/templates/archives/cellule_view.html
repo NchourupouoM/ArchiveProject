@@ -7,6 +7,11 @@
         <span class="backbuton">
             <a href="{% url 'dossier' %}">Back</a>
         </span>
+        {% if perms.dcellule.add_cellule %}
+        <span class="creerDossier">
+            <a href="{% url 'creerCellule' dossier_id %}">creer une cellule</a>
+        </span>
+        {% endif %}
     </div>
     <div class="dossier-title">
         <img src="{% static 'images/dossier.png'%}" alt="">
@@ -22,9 +27,11 @@
                 <a href="{% url 'archive' cellule.id %}">
                     {{cellule.nom}}
                 </a>
+                {% if cellule.dossier_jour.date == today%}
                 <a href="{% url 'upload' cellule.id %}">
                     <img src="{% static 'images/cloud-computing.png' %}" alt="">
                     upload</a>
+                {% endif %}
             </div>
         </div>
         <hr>

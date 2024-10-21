@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static %}
+<div class="updated_profil">
+    <h2>Creer une cellule d'archivage</h2>
+    <div class="form-contenner">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="upload-buttons">
+                <button type="submit">Valider</button>
+                <a href="{% url 'cellule' dossier_id %}">Annuler ?</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock content%}

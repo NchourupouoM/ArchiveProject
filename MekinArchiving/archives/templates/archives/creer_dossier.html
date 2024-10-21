@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static %}
+<div class="button-back">
+    <div>
+        <img src="{% static 'images/bouton-retour.png' %}" alt="">
+    </div>
+    <div class="back">
+        <a href="{% url 'dossier' %}">Back</a>
+    </div>
+</div>
+<div class="updated_profil">
+    <h2>Creation d'un dossier d'archivage</h2>
+    <div class="form-contenner">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="upload-buttons">
+                <button type="submit">Valider</button>
+                <a href="{% url 'dossier' %}">Annuler ?</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content%}

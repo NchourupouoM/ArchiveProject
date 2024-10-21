@@ -12,4 +12,7 @@ urlpatterns = [
     path('cellules/<int:dossier_id>/', archives.views.cellule, name='cellule'),
     path('documents/<int:cellule_id>/', archives.views.list_archives_view, name="archive"),
     path('document/<int:cellule_id>/upload',archives.views.upload_archive, name='upload'),
+    path('dashboard/',archives.views.dashboard,name='dashboard'),
+    path('creerDossier/',archives.views.creerDossier,name='creerDossier'),
+    path('creerCellule/<int:dossier_id>/',archives.views.creerCellule,name='creerCellule'),
 ]

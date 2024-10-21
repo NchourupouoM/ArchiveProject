@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static%}
+<div class="button-back">
+    <div>
+        <img src="{% static 'images/bouton-retour.png' %}" alt="">
+    </div>
+    <div class="back">
+        <a href="{% url 'mon-compte' %}">Back</a>
+    </div>
+</div>
+
+<h2 class="AjoutMembre">Ajouter un utilisateur</h2>
+{% if form.errors %}
+{{ form.errors }}
+{% endif %}
+<div class="InscriptionForm">
+    <form class="inscForm" method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit">Ajouter</button>
+    </form>
+
+</div>
+{% endblock content %}

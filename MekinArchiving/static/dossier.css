@@ -1,7 +1,7 @@
 .content .dossiers-container .cellule{
     margin-left: 40px;
     margin-top: 5px;
-}   
+} 
 
 .content .dossiers-container .cellule-uploader{
     display: flex;
@@ -27,6 +27,7 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    position: relative;
 }
 
 .content .dossiers-container .dossier-back-container{
@@ -97,3 +98,26 @@
     height: 20px;
 }
 
+.dossiers-container .creerDossier{
+    margin-top: 13px;
+    margin-left: 500px;
+    width: 120px;
+    height: 25px;
+    background-color: rgb(61, 61, 225);
+    border-radius: 7px;
+}
+
+.dossiers-container .creerDossier a{
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+}
+
+.dossiers-container .creerDossier:hover{
+    background-color: rgb(12, 12, 88);
+}
+
+.all_dossiers{
+    /* position:absolute; */
+    overflow:auto;
+}

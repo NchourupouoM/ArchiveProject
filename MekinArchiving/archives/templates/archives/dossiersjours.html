@@ -7,21 +7,28 @@
         <span class="backbuton">
             <a href="{% url 'home' %}">Back</a>
         </span>
+        {% if perms.dossier.add_dossier %}
+        <span class="creerDossier">
+            <a href="{% url 'creerDossier' %}">Creer un dossier</a>
+        </span>
+        {% endif %}
     </div>
-    {% for dossier in dossiers %}
-    <div class="dossier">
-        <div class="dossier-elt">
-            <div class="image-dossier">
-                <img src="{% static 'images/dossier.png'%}" alt="">
+    <div class="all_dossiers">
+        {% for dossier in dossiers %}
+        <div class="dossier">
+            <div class="dossier-elt">
+                <div class="image-dossier">
+                    <img src="{% static 'images/dossier.png'%}" alt="">
+                </div>
+                <div>
+                    <a href="{% url 'cellule' dossier.id %}">
+                        DOC_{{dossier.date}}
+                    </a>
+                </div>
             </div>
-            <div>
-                <a href="{% url 'cellule' dossier.id %}">
-                    DOC_{{dossier.date}}
-                </a>
-            </div>
+            <hr>
         </div>
-        <hr>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock content %}

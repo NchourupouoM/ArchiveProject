@@ -1,14 +1,25 @@
 {% extends 'base.html'%}
 {% block content %}
-
-<h2>Uploader une archive</h2>
-{{message}}
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form.as_p}}
-    <div class="upload-buttons">
-        <button type="submit">Valider</button>
-        <a href="{% url 'cellule' cellule %}">Annuler ?</a>
+{% load static %}
+<div class="button-back buton-back-addUser">
+    <div>
+        <img src="{% static 'images/bouton-retour.png' %}" alt="">
     </div>
-</form>
+    <div class="back">
+        <a href="{% url 'cellule' cellule %}">Back</a>
+    </div>
+</div>
+<div class="updated_profil">
+    <h2 class="title_updated">Uploader une archive</h2>
+    <div class="form-contenner">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="upload-buttons">
+                <button type="submit">Valider</button>
+                <a href="{% url 'cellule' cellule %}">Annuler ?</a>
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock content%}

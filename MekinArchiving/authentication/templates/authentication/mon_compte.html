@@ -27,7 +27,14 @@
                 <img class="photo-icon" src="{% static 'images/reset-password.png'%}" alt="">
                 <a href="{% url 'password_change'%}">Modifier votre mot de passe</a>
             </div>
+            {% if perms.user.add_user %}
+            <div class="updated-password updated">
+                <img class="photo-icon" src="{% static 'images/reset-password.png'%}" alt="">
+                <a href="{% url 'signup'%}">Ajouter un utilisateur</a>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>
 {% endblock content %}
+signup

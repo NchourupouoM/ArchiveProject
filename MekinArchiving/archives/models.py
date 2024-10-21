@@ -1,9 +1,10 @@
 from django.db import models
 from django.conf import settings
+from datetime import date
 
 # Create your models here.
 class DossierJour(models.Model):
-    date = models.DateField(unique=True)  # Assure qu'il n'y a qu'un dossier par jour
+    date = models.DateField(unique=True,default=date.today())  # Assure qu'il n'y a qu'un dossier par jour
     count_in_other_table = models.IntegerField(default=0)
     
     def __str__(self):

@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="{% static '../static/mon_compte.css'%}">
   <link rel="stylesheet" href="{% static '../static/updated_profil.css'%}">
   <link rel="stylesheet" href="{% static '../static/password_change.css'%}">
+  <link rel="stylesheet" href="{% static '../static/signup.css'%}">
 </head>
 <body>
   <main>
@@ -29,15 +30,15 @@
       </div>
       <nav class="navbar">
         <div class="bt-navbar">
-          <img src="{% static './images/tableau-de-bord.png'%}" alt="">
-          <span>
-              <a href="#">Dashboard</a>
-          </span>
-        </div>
-        <div class="bt-navbar">
           <img src="{% static './images/utilisateur.png' %}" alt="">
           <span>
               <a href="{% url 'mon-compte' %}"> Mon Compte </a>
+          </span>
+        </div>
+        <div class="bt-navbar">
+          <img src="{% static './images/tableau-de-bord.png'%}" alt="">
+          <span>
+            <a href="{% url 'dashboard' %}">Dashboard</a>
           </span>
         </div>
         <div class="bt-navbar ">
